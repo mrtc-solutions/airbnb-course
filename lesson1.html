@@ -6,21 +6,22 @@
   <title>Lesson 1 | Airbnb Full Course for Beginners | MRTC Research and Tasking Solutions</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
-    /* Reset & base */
     * {
       box-sizing: border-box;
     }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
       background-color: #f5f7fa;
       color: #222;
       line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
     }
 
-    /* Container */
     .container {
       max-width: 900px;
       margin: 3rem auto;
@@ -30,30 +31,30 @@
       box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1);
     }
 
-    /* Header */
     header {
       text-align: center;
-      padding: 3rem 1rem 2rem;
-      background-color: #0d234b; /* dark blue */
+      padding: 4rem 1rem 3rem;
+      background: url('https://images.unsplash.com/photo-1590490360182-bd94f7e5e4e9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
       border-top-left-radius: 8px;
       border-top-right-radius: 8px;
-      color: #d1d5db; /* light grey */
-      box-shadow: inset 0 -3px 5px rgba(255,255,255,0.1);
+      color: #fff;
+      box-shadow: inset 0 -3px 6px rgba(0, 0, 0, 0.3);
     }
+
     header h1 {
       margin: 0 0 0.5rem;
       font-weight: 700;
       font-size: 2.25rem;
-      color: #e0e7ff;
-    }
-    header p {
-      margin: 0;
-      font-weight: 600;
-      font-size: 1.125rem;
-      color: #a5b4fc;
+      color: #ffffff;
     }
 
-    /* Main content */
+    header p {
+      margin: 0.2rem 0;
+      font-weight: 600;
+      font-size: 1.125rem;
+      color: #e0e7ff;
+    }
+
     main {
       padding: 2rem 2rem 3rem;
     }
@@ -78,10 +79,9 @@
       padding-left: 1.5rem;
     }
 
-    /* Video container with responsive aspect ratio */
     .video-container {
       position: relative;
-      padding-bottom: 56.25%; /* 16:9 aspect ratio */
+      padding-bottom: 56.25%;
       height: 0;
       overflow: hidden;
       border-radius: 10px;
@@ -97,7 +97,6 @@
       border-radius: 10px;
     }
 
-    /* Extended description box */
     .extended-description {
       background-color: #e0e7ff;
       border-left: 5px solid #4f46e5;
@@ -109,10 +108,9 @@
       box-shadow: 0 4px 12px rgba(79, 70, 229, 0.1);
     }
 
-    /* Button styling */
     .btn-primary {
       display: inline-block;
-      background-color: #4f46e5; /* Indigo-600 */
+      background-color: #4f46e5;
       color: #fff;
       padding: 0.75rem 1.8rem;
       font-weight: 600;
@@ -130,7 +128,40 @@
       outline: none;
     }
 
-    /* Responsive adjustments */
+    .testimonial {
+      margin-top: 3rem;
+      padding: 2rem;
+      background-color: #f0f4ff;
+      border-radius: 8px;
+    }
+
+    .testimonial blockquote {
+      font-style: italic;
+      color: #333;
+      margin: 0 0 0.5rem;
+    }
+
+    .testimonial p {
+      font-weight: bold;
+      color: #4f46e5;
+      margin: 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      background-color: #0d234b;
+      color: #d1d5db;
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+    }
+
+    footer a {
+      color: #a5b4fc;
+      text-decoration: none;
+    }
+
     @media (max-width: 600px) {
       .container {
         margin: 2rem 1rem;
@@ -155,6 +186,11 @@
     </header>
 
     <main>
+      <div style="margin-bottom: 2rem;">
+        <label for="progress">Course Progress:</label>
+        <progress id="progress" value="1" max="10" style="width: 100%; height: 20px;"></progress>
+      </div>
+
       <h2>What is Airbnb?</h2>
       <p>Airbnb is a global online platform that connects travelers with hosts offering unique accommodations worldwide. Founded in 2008, Airbnb has revolutionized travel by allowing people to rent out their homes or rooms and experience stays beyond traditional hotels.</p>
 
@@ -172,7 +208,6 @@
         <li>Direct communication through the platform for safety and convenience</li>
       </ul>
 
-      <!-- Video Embed -->
       <div class="video-container">
         <iframe
           src="https://drive.google.com/file/d/1-qdFOVwJPkeFNZrM0Cs6-pyUbnzHHqSm/preview"
@@ -182,7 +217,7 @@
         ></iframe>
       </div>
 
-      <section class="extended-description" aria-label="Extended description about Airbnb and the course introduction">
+      <section class="extended-description">
         <h3>Extended Description</h3>
         <p>
           This lesson provides a comprehensive introduction to Airbnb, highlighting its origins, core functionality, and benefits for both guests and hosts. It sets the stage for understanding how the platform operates, its impact on the travel industry, and what you can expect to learn in this course.
@@ -192,10 +227,21 @@
         </p>
       </section>
 
+      <section class="testimonial">
+        <h2>What Learners Say</h2>
+        <blockquote>“This course gave me the confidence to start my first Airbnb hosting experience. Highly recommended!”</blockquote>
+        <p>— Chikondi Banda, Malawi</p>
+      </section>
+
       <p><strong>Ready to continue?</strong> Proceed to the next lesson to learn how to create your Airbnb account and start booking your first stay.</p>
 
       <a href="lesson2.html" class="btn-primary" aria-label="Continue to Lesson 2">Continue to Lesson 2</a>
     </main>
   </div>
+
+  <footer>
+    <p>&copy; 2025 MRTC Research and Tasking Solutions. All rights reserved.</p>
+    <p>Contact us at <a href="mailto:info@mrtc.org">info@mrtc.org</a></p>
+  </footer>
 </body>
 </html>
